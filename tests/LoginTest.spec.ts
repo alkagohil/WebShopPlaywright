@@ -49,4 +49,7 @@ test.describe('Login Functionality', () => {
         }
         });
     });
+    test("  Verify Remember Me Functionality", async ({ loginPage }) => {
+
+    });
 });

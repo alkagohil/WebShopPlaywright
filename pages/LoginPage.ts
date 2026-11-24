@@ -9,6 +9,7 @@ class LoginPage extends BasePage {
     private readonly logoutButton:Locator;
     private readonly errorMessage: Locator;
     private readonly errorMessageInValidUsername: Locator;
+     private readonly rememberMe: Locator;
   
 
     constructor(page: Page) {
@@ -20,6 +21,7 @@ class LoginPage extends BasePage {
         this.logoutButton=page.getByText("Log out");
         this.errorMessage=page.locator('[class="validation-summary-errors"]');
         this.errorMessageInValidUsername=page.locator('[class="field-validation-error"]');
+        this.rememberMe=page.getByLabel("Remember me?");
         }
     async navigateToLoginPage() {
             await this.loginLink.click()
